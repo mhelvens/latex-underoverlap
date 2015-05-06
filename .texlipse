@@ -1,0 +1,14 @@
+#TeXlipse project settings
+#Fri Feb 01 17:10:07 CET 2013
+markTmpDer=true
+builderNum=2
+outputDir=
+makeIndSty=
+bibrefDir=
+outputFormat=pdf
+tempDir=tmp
+mainTexFile=underoverlap.tex
+outputFile=underoverlap.pdf
+langSpell=en
+markDer=true
+srcDir=

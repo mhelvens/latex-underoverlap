@@ -1,0 +1,38 @@
+#!/bin/bash
+
+DOC="underoverlap"
+
+FILES="$DOC.sty    \
+       $DOC.tex     \
+       $DOC.pdf      \
+       dry.sty        \
+       with.sty        \
+       packagedoc.cls   \
+       README"
+
+VERSION=0.0.1-r1
+
+pdflatex $DOC
+
+makeindex -s gglo.ist -o $DOC.gls $DOC.glo
+makeindex -s gind.ist -o $DOC.ind $DOC.idx
+
+pdflatex $DOC
+pdflatex $DOC
+
+mv *.aux tmp
+mv *.glo tmp
+mv *.gls tmp
+mv *.idx tmp
+mv *.ilg tmp
+mv *.ind tmp
+mv *.log tmp
+mv *.out tmp
+mv *.tmp tmp
+
+mkdir $DOC
+cp $FILES $DOC
+tar -czf $DOC-$VERSION.tar.gz $DOC
+rm -rf $DOC
+
+mv $DOC.pdf $DOC-$VERSION.pdf
