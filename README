@@ -4,6 +4,15 @@ Last Modified : 2013-02-01
 
 Author        : Michiel Helvensteijn  (www.mhelvens.net)
 
+===== Summary =====
+
+TeX and LaTeX provide several commands for decorating parts of our
+equations; to direct attention or to indicate some special meaning.
+You can even nest them. But they have an inherent limitation: they
+cannot overlap partially. That's what this package is all about.
+It allows you to define new decorator commands that can partially
+overlap, as well as augment existing commands.
+
 ===== Prerequisites =====
 
 To use this package, you need at least the following packages
